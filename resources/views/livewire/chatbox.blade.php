@@ -14,7 +14,7 @@ new class extends Component {
         $this->reset('message');
     }
 
-    #[On('echo:chats,MessageSent')]
+    #[On('echo-private:chats,MessageSent')]
     public function onMessageSent($event)
     {
         //dd($event);
