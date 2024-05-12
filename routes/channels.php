@@ -7,5 +7,5 @@ Broadcast::channel('App.Models.User.{id}', function ($user, $id) {
 });
 
 Broadcast::channel('chats', function ($user){
-   return  $user->id != null;
+   return  $user;
 });

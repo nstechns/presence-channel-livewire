@@ -19,7 +19,7 @@ class MessageSent implements ShouldBroadcast
      */
     public function __construct(
         public string $name,
-        public string $text)
+        public string $text, public string $type='user')
     {
 
     }
@@ -32,7 +32,7 @@ class MessageSent implements ShouldBroadcast
     public function broadcastOn(): array
     {
         return [
-            new PrivateChannel('chats'),
+            new PresenceChannel('chats'),
         ];
     }
 }
